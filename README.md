@@ -1,6 +1,6 @@
 ## R Lesson
 
-**Author:** Kristen Mittelsteadt
+**Author:** Kristen Mittelsteadt, Lorena Botero
 
 **Dependencies:** dplyr, ggplot2
 
