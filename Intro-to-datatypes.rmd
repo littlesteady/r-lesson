@@ -1,0 +1,95 @@
+---
+title: "Analysis of Experiment"
+author: "Kristen Mittelsteadt"
+date: "1/28/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+experiment <- read.csv(file = "data/experiment.csv")
+```
+
+```{r}
+experiment$protein_names
+experiment$intensity + 1.
+paste ("Protein name:", experiment$protein_names)
+```
+```{r}
+experiment2 <- experiment
+experiment2$protein_names <- paste("Protein name:", experiment2$protein_names)
+```
+
+
+```{r}
+experiment$intensity + experiment$intensity
+experiment$protein_names + experiment$intensity
+```
+
+```{r}
+list(3.14, TRUE, "banana")
+list_example <- list(title = "Numbers", numbers=c(1, 2, 3), data_exists=TRUE)
+```
+
+```{r}
+fruits <- c("apple", "apple", "banana", "grape", "grape")
+factor_fruits <- factor(fruits)
+```
+
+```{r}
+mydata <- c("case", "control", "case", "control")
+factor_mydata <- factor(mydata, levels = c("control", "case"))
+```
+
+```{r}
+replicate expe<- c(1, 2, 1)
+cbind(experiment, replicate)
+```
+
+```{r}
+levels(experiment$protein_names) <- c(levels(experiment$protein_names), "FOXO3")
+new_protein <- list(protein_names="FOXO3", 
+                    intensity=1.5, 
+                    in_membrane=0,
+                    replicate=2,
+                    replicate=2)
+rbind(experiment, new_protein)
+```
+```{r}
+experiment[-,5]
+```
+```{r}
+new_protein <- list(protein_names="FOXO3",
+                    intensity=1.5,
+                    in_membrane=0,
+                    replicate=2,
+                    replicate=2)
+rbind(experiment, new_protein)
+
+```
+```{r}
+experiment[,-5]
+```
+
+```{r}
+new_protein <- list(protein_names="FOXO3",
+                    intensity=1.5,
+                    in_membrane=0,
+                    replicate=2)
+rbind(experiment, new_protein)
+```
+
+```{r}
+experiment[,-5]
+```
+```{r}
+levels(experiment$protein_names) <- c(levels(experiment$protein_names), "FOXO3")
+new_protein <- list(protein_names="FOXO3",
+                    intensity=1.5,
+                    in_membrane=0,
+                    replicate=2)
+rbind(experiment, new_protein)
+```
